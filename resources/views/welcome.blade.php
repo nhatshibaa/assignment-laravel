@@ -40,7 +40,7 @@
 					User Form
 					</span>
 
-                <div class="wrap-input100 m-b-23">
+                <div class="wrap-input100">
                     <span class="label-input100">Identity Number</span>
                     <input class="input100" type="text" name="id-numb" placeholder="Type your id number">
                     @error('id-numb')
@@ -48,7 +48,7 @@
                     @enderror
                 </div>
 
-                <div class="wrap-input100  m-b-23">
+                <div class="wrap-input100">
                     <span class="label-input100">First Name</span>
                     <input class="input100" type="text" name="fName" placeholder="Type your first name">
                     @error('fName')
@@ -56,7 +56,7 @@
                     @enderror
                 </div>
 
-                <div class="wrap-input100  m-b-23">
+                <div class="wrap-input100 ">
                     <span class="label-input100">Last Name</span>
                     <input class="input100" type="text" name="lName" placeholder="Type your last name">
                     @error('lName')
@@ -64,7 +64,7 @@
                     @enderror
                 </div>
 
-                <div class="wrap-input100  m-b-23">
+                <div class="wrap-input100 ">
                     <span class="label-input100">Phone</span>
                     <input class="input100" type="text" name="phone" placeholder="Type your phone">
                     @error('phone')
@@ -74,14 +74,14 @@
 
                 <div class="wrap-input100 m-b-23" style="border-bottom: none">
                     <span class="label-input100">Gender</span>
-                    <input class="input-mini" type="radio" name="id_card" value="1">Male
-                    <input class="input-mini" type="radio" name="id_card" value="2">Female
+                    <input class="input-mini" type="radio" name="gender" value="1">Male
+                    <input class="input-mini" type="radio" name="gender" value="2">Female
                 </div>
 
                 <div class="form-group">
-                    <div class="col-12">
+                    <div class="col-12 input-group">
                         <div class="col-6"><input class="btn btn-sm btn-primary" type="submit" value="Save"></div>
-                        <div class="col-6"><input class="btn btn-sm btn-block" type="reset" value="Reset"></div>
+                        <div class="col-3" ><input class="btn btn-sm btn-block" type="reset" value="Reset"></div>
                     </div>
                 </div>
             </form>

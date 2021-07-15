@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AccountRequest;
+use App\Models\Account;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -33,18 +35,17 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AccountRequest $request)
     {
         //
         $request->validate(
             [
-                'id-numb' => 'required|size:10',
+                'id-numb' => 'size:10',
                 'fName' => 'required',
                 'lName' => 'required',
                 'phone' => 'required',
             ],
             [
-                'id-numb.required' => 'Please enter identity number!.',
                 'id-numb.size' => 'Must be 10 character',
                 'fName.required' => 'Required!',
                 'lName.required' => 'Required!',
@@ -52,6 +53,15 @@ class UserController extends Controller
             ]
         );
         $request ->validate();
+
+        $obj  = new Account();
+        $obj->identityNumber = $request->get('id-numb');
+        $obj->firstName = $request->get('fName');
+        $obj->lastName = $request->get('lName');
+        $obj->phone = $request->get('phone');
+        $obj->gender = $request->get('gender');
+        $obj->save();
+        return redirect('/user');
     }
 
     /**

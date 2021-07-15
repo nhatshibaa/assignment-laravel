@@ -13,5 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user/register', [\App\Http\Controllers\UserController::class, 'create']);
+Route::get('/user/form', [\App\Http\Controllers\UserController::class, 'create'])->name('user.form');
 Route::post('/user', [\App\Http\Controllers\UserController::class, 'store']);
