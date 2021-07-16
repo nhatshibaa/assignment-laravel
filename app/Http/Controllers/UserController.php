@@ -16,6 +16,8 @@ class UserController extends Controller
     public function index()
     {
         //
+        $list = Account::paginate(10);
+        return view('list', ['list'=>$list]);
     }
 
     /**
@@ -38,21 +40,7 @@ class UserController extends Controller
     public function store(AccountRequest $request)
     {
         //
-        $request->validate(
-            [
-                'id-numb' => 'size:10',
-                'fName' => 'required',
-                'lName' => 'required',
-                'phone' => 'required',
-            ],
-            [
-                'id-numb.size' => 'Must be 10 character',
-                'fName.required' => 'Required!',
-                'lName.required' => 'Required!',
-                'phone.required' => 'Required!',
-            ]
-        );
-        $request ->validate();
+        $request ->validated();
 
         $obj  = new Account();
         $obj->identityNumber = $request->get('id-numb');

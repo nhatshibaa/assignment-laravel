@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/user/form', [\App\Http\Controllers\UserController::class, 'create'])->name('user.form');
 Route::post('/user', [\App\Http\Controllers\UserController::class, 'store']);
+Route::get('/user', [\App\Http\Controllers\UserController::class, 'index']);

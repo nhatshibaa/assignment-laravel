@@ -75,7 +75,7 @@
                 <div class="wrap-input100 m-b-23" style="border-bottom: none">
                     <span class="label-input100">Gender</span>
                     <input class="input-mini" type="radio" name="gender" value="1">Male
-                    <input class="input-mini" type="radio" name="gender" value="2">Female
+                    <input class="input-mini" type="radio" name="gender" value="0">Female
                 </div>
 
                 <div class="form-group">
